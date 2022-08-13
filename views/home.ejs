@@ -1,0 +1,16 @@
+<%-include("partials/header.ejs")-%>
+    <h1>Home</h1>
+    <p>
+        <%=text%>
+    </p>
+          <%for(let i=0; i <object.length; i++){ %>
+            <h1>
+                <%=object[i].titleName%>
+            </h1>
+            <p>
+                <%=object[i].content.slice(0, 100)%>
+                ...
+                <a href="https://bloog-app.herokuapp.com/post/<%=object[i].titleName%>">Read more</a>
+            <p>
+        <%}%>
+<%-include("partials/footer.ejs")-%>
